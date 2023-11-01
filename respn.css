@@ -1,4 +1,3 @@
-
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
 * {
   padding: 0;
@@ -292,8 +291,8 @@ p {
   /* About */
 
   #about .col-left .about-img {
-    height: 100%;
-    width: 100%;
+    height: 400px;
+    width: 400px;
    
  
   }
@@ -427,4 +426,30 @@ p {
   margin: 0 auto;
   margin-top: 20px; /* Adjust the margin as needed */
   border: 8px solid rgb(239, 176, 186); /* Pink border */
+}
+
+.more-art {
+  display: inline-block;
+  padding: 20px;
+ ;
+  background-color: hsl(0, 100%, 97%); /* Choose your desired background color */
+  color: #fff; /* Text color */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  /* Optional: Add hover effect */
+  &:hover {
+      background-color: rgb(239, 176, 186); /* Change to a different color on hover */
+  }
+}
+
+
+/* Add a hover effect for images in the "Artworks" and "Photography" sections */
+.column img {
+  transition: transform 3.3s; /* Add a smooth transition effect for scaling */
+}
+
+.column img:hover {
+  transform: scale(0.9); /* Scale the image to 120% on hover (adjust the value as needed) */
 }
