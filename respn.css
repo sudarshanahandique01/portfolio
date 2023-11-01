@@ -1,9 +1,11 @@
+
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 
 html {
   font-size: 10px;
@@ -41,6 +43,7 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+ 
 }
 p {
   color: black;
@@ -62,7 +65,7 @@ p {
   text-align: center;
 }
 .section-title span {
-  color: rgb(235, 173, 39);
+  color: rgb(239, 176, 186);
 }
 
 /* Header section */
@@ -72,12 +75,14 @@ p {
   left: 0;
   top: 0;
   width: 100vw;
-  height: auto; //top opaque
+  height: auto; /*top opaque*/
+  
+ 
 }
 #header .header {
   min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0.24);
-  transition: 0.3s ease background-color;
+  
+  
 }
 #header .nav-bar {
   display: flex;
@@ -85,13 +90,13 @@ p {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1300px;
-  padding: 0 10px;
+  max-width: 1500px;
+  padding: 0 30px;
 }
 #header .nav-list ul {
   list-style: none;
   position: absolute;
-  background-color: rgb(254, 254, 254);
+
   width: 100vw;
   height: 100vh;
   left: 100%;
@@ -110,7 +115,8 @@ p {
   font-weight: 500;
   letter-spacing: 0.2rem;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  background-color: hsl(0, 0%, 90%)
   text-transform: uppercase;
   padding: 20px;
   display: block;
@@ -120,56 +126,6 @@ p {
   color: rgb(0, 0, 0);
 }
 
-/* Hero Section */
-
-#hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: repeating-linear-gradient(to right, #ffffff, #f8ce5a);
-
-  opacity: 0.7;
-  z-index: -1;
-}
-
-#hero .bubbles {
-  position: relative;
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
-#hero .bubbles span {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: #d9d9d9;
-  margin: 0 4px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px #d9d9d9, 0 0 50px #d9d9d9, 0 0 100px #d9d9d9;
-  animation: animate 15s linear infinite;
-  animation-duration: calc(125s / var(--i));
-}
-
-#hero .bubbles span:nth-child(even) {
-  background: #ffffff;
-  box-shadow: 0 0 0 10px #ffffff, 0 0 50px #ffffff, 0 0 100px #ffffff;
-}
-
-@keyframes animate {
-  0% {
-    transform: translateY(100vh) scale(0);
-  }
-  100% {
-    transform: translateY(-10vh) scale(1);
-  }
-}
 
 .img {
   border-radius: 50px;
@@ -279,7 +235,7 @@ p {
 
 /* Footer */
 #footer {
-  background-image: linear-gradient(60deg, #ffffff 0%, #f8ce5a 100%);
+  background-image: linear-gradient(60deg, #ffffff 0%, rgb(239, 176, 186) 100%);
 }
 #footer .footer {
   min-height: 200px;
@@ -338,7 +294,12 @@ p {
   #about .col-left .about-img {
     height: 100%;
     width: 100%;
+   
  
+  }
+
+  #about .about-img{
+    border-radius: 60%;
   }
 
   #about .about {
@@ -429,7 +390,7 @@ p {
   text-align: center;
 }
 
-.insta img{
+.insta{
   height: 10%;
   width: 10%;
   justify-content: right;
@@ -438,4 +399,32 @@ p {
 .link{
   font-size: 10px;
   margin-left: 10px;
+}
+
+/* Add these styles to target the #hero section */
+#hero {
+  background-color: hsl(0, 100%, 97%); /* Set the background color to off-white */
+ 
+  padding: 20px; /* Add padding to create a boundary */
+
+  /* You can adjust the border properties as needed */
+  border: 8px solid rgb(239, 176, 186);
+}
+
+/* Style the h1 element inside #hero with different color */
+#hero h1 {
+  color: black; /* Change the text color to black */
+}
+
+/* Add this CSS code to your existing CSS file */
+#hero h1::before {
+  content: "";
+  display: block;
+  background: url('https://img.freepik.com/premium-vector/woman-profile-cartoon_18591-58480.jpg') center/cover no-repeat;
+  width: 200px; /* Set the width as needed */
+  height: 200px; /* Set the height as needed */
+  border-radius: 50%; /* Make it circular */
+  margin: 0 auto;
+  margin-top: 20px; /* Adjust the margin as needed */
+  border: 8px solid rgb(239, 176, 186); /* Pink border */
 }
