@@ -8,6 +8,7 @@ html {
 
 body {
     overflow-x: hidden;
+    position: relative;
 }
 
 
@@ -21,7 +22,9 @@ nav {
 
 .navbar-scrolled {
     background: rgba(3, 7, 18, 0.96) !important;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -31,8 +34,11 @@ nav {
 
 .nav-link {
     position: relative;
+
     color: #9ca3af;
-    transition: color 0.3s ease;
+
+    transition:
+        color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -41,13 +47,19 @@ nav {
 
 .nav-link::after {
     content: "";
+
     position: absolute;
+
     left: 0;
     bottom: -6px;
+
     width: 0;
     height: 2px;
+
     background: #06b6d4;
-    transition: width 0.3s ease;
+
+    transition:
+        width 0.3s ease;
 }
 
 .nav-link:hover::after {
@@ -60,21 +72,25 @@ nav {
 ========================================================= */
 
 section:first-of-type .max-w-3xl {
-    animation: heroFadeIn 1.2s ease forwards;
+    animation:
+        heroFadeIn 1.2s ease forwards;
 }
 
 @keyframes heroFadeIn {
 
     from {
         opacity: 0;
-        transform: translateY(35px);
+
+        transform:
+            translateY(35px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
-    }
 
+        transform:
+            translateY(0);
+    }
 }
 
 
@@ -83,12 +99,14 @@ section:first-of-type .max-w-3xl {
 ========================================================= */
 
 section:first-of-type h1 {
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #a5f3fc,
-        #ffffff
-    );
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #a5f3fc,
+            #ffffff
+        );
 
     background-size: 200% auto;
 
@@ -97,7 +115,8 @@ section:first-of-type h1 {
 
     -webkit-text-fill-color: transparent;
 
-    animation: gradientMove 5s linear infinite;
+    animation:
+        gradientMove 5s linear infinite;
 }
 
 @keyframes gradientMove {
@@ -109,12 +128,11 @@ section:first-of-type h1 {
     100% {
         background-position: 200% center;
     }
-
 }
 
 
 /* =========================================================
-   BUTTONS
+   GENERAL LINKS
 ========================================================= */
 
 a {
@@ -125,18 +143,23 @@ a {
 }
 
 a:hover {
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 }
 
 
-/* Hero buttons */
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 section:first-of-type a[href="#projects"]:hover {
+
     box-shadow:
         0 10px 30px rgba(8, 145, 178, 0.25);
 }
 
-section:first-of-type a[href*="resume"]:hover {
+section:first-of-type a[href*="drive.google"]:hover {
+
     box-shadow:
         0 10px 30px rgba(124, 58, 237, 0.25);
 }
@@ -147,9 +170,11 @@ section:first-of-type a[href*="resume"]:hover {
 ========================================================= */
 
 .info-card {
+
     padding: 28px;
 
-    border: 1px solid #1f2937;
+    border:
+        1px solid #1f2937;
 
     border-radius: 14px;
 
@@ -167,12 +192,40 @@ section:first-of-type a[href*="resume"]:hover {
 }
 
 .info-card:hover {
-    transform: translateY(-8px);
 
-    border-color: #0891b2;
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #0891b2;
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   INFO CARD ICONS
+========================================================= */
+
+.info-icon {
+
+    margin-bottom: 12px;
+
+    font-size: 2rem;
+
+    color: #22d3ee;
+}
+
+.info-icon i {
+    transition:
+        transform 0.3s ease;
+}
+
+.info-card:hover .info-icon i {
+
+    transform:
+        scale(1.15);
 }
 
 
@@ -181,13 +234,16 @@ section:first-of-type a[href*="resume"]:hover {
 ========================================================= */
 
 .skill-category {
+
     padding: 28px;
 
-    border: 1px solid #1f2937;
+    border:
+        1px solid #1f2937;
 
     border-radius: 14px;
 
-    background: rgba(17, 24, 39, 0.55);
+    background:
+        rgba(17, 24, 39, 0.55);
 
     transition:
         transform 0.35s ease,
@@ -196,11 +252,15 @@ section:first-of-type a[href*="resume"]:hover {
 }
 
 .skill-category:hover {
-    transform: translateY(-6px);
 
-    border-color: #374151;
+    transform:
+        translateY(-6px);
 
-    background: rgba(31, 41, 55, 0.7);
+    border-color:
+        #374151;
+
+    background:
+        rgba(31, 41, 55, 0.7);
 }
 
 
@@ -209,17 +269,23 @@ section:first-of-type a[href*="resume"]:hover {
 ========================================================= */
 
 .skill-tag {
+
     display: inline-block;
 
-    padding: 7px 12px;
+    padding:
+        7px 12px;
 
-    border-radius: 8px;
+    border-radius:
+        8px;
 
-    background: #1f2937;
+    background:
+        #1f2937;
 
-    color: #d1d5db;
+    color:
+        #d1d5db;
 
-    font-size: 0.85rem;
+    font-size:
+        0.85rem;
 
     transition:
         background 0.3s ease,
@@ -228,13 +294,45 @@ section:first-of-type a[href*="resume"]:hover {
 }
 
 .skill-tag:hover {
-    background: #164e63;
 
-    color: #ffffff;
+    background:
+        #164e63;
 
-    transform: translateY(-2px);
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-2px);
 }
 
+
+/* =========================================================
+   SKILL ICON TAGS
+========================================================= */
+
+.skill-icon-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.skill-icon-tag i {
+
+    font-size:
+        1.15rem;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.skill-icon-tag:hover i {
+
+    transform:
+        scale(1.15);
+}
 
 
 /* =========================================================
@@ -242,9 +340,14 @@ section:first-of-type a[href*="resume"]:hover {
 ========================================================= */
 
 .project-card {
+
     padding: 30px;
-    border: 1px solid #1f2937;
-    border-radius: 16px;
+
+    border:
+        1px solid #1f2937;
+
+    border-radius:
+        16px;
 
     background:
         linear-gradient(
@@ -253,8 +356,11 @@ section:first-of-type a[href*="resume"]:hover {
             rgba(3, 7, 18, 0.8)
         );
 
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
+
+    flex-direction:
+        column;
 
     transition:
         transform 0.4s ease,
@@ -263,8 +369,12 @@ section:first-of-type a[href*="resume"]:hover {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    border-color: #155e75;
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #155e75;
 
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.35);
@@ -272,17 +382,110 @@ section:first-of-type a[href*="resume"]:hover {
 
 
 /* =========================================================
+   PROJECT BUTTON CONTAINER
+========================================================= */
+
+.project-buttons {
+
+    margin-top:
+        auto;
+
+    padding-top:
+        25px;
+
+    display:
+        flex;
+
+    gap:
+        16px;
+
+    flex-wrap:
+        wrap;
+}
+
+
+/* =========================================================
    PROJECT BUTTONS
 ========================================================= */
 
-.project-card .flex.gap-4 {
-    margin-top: auto;
-    padding-top: 25px;
+.project-demo-btn,
+.project-github-btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        12px 20px;
+
+    border-radius:
+        8px;
+
+    font-weight:
+        500;
+
+    color:
+        white;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.project-card a:hover {
-    transform: translateY(-3px);
+
+/* Live Demo */
+
+.project-demo-btn {
+
+    background:
+        #0891b2;
 }
+
+.project-demo-btn:hover {
+
+    background:
+        #0e7490;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(8, 145, 178, 0.25);
+}
+
+
+/* GitHub */
+
+.project-github-btn {
+
+    background:
+        #374151;
+}
+
+.project-github-btn:hover {
+
+    background:
+        #1f2937;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
 
 /* =========================================================
    EXPERIENCE CARDS
@@ -290,11 +493,14 @@ section:first-of-type a[href*="resume"]:hover {
 
 .experience-card {
 
-    padding: 30px;
+    padding:
+        30px;
 
-    border-left: 2px solid #164e63;
+    border-left:
+        2px solid #164e63;
 
-    border-radius: 0 14px 14px 0;
+    border-radius:
+        0 14px 14px 0;
 
     background:
         linear-gradient(
@@ -311,9 +517,11 @@ section:first-of-type a[href*="resume"]:hover {
 
 .experience-card:hover {
 
-    transform: translateX(6px);
+    transform:
+        translateX(6px);
 
-    border-left-color: #06b6d4;
+    border-left-color:
+        #06b6d4;
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.25);
@@ -325,6 +533,13 @@ section:first-of-type a[href*="resume"]:hover {
 ========================================================= */
 
 .contact-link {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
     transition:
         transform 0.3s ease,
         background 0.3s ease,
@@ -333,11 +548,29 @@ section:first-of-type a[href*="resume"]:hover {
 
 .contact-link:hover {
 
-    transform: translateY(-4px);
+    transform:
+        translateY(-4px);
 
-    background: #111827;
+    background:
+        #111827;
 
-    border-color: #0891b2;
+    border-color:
+        #0891b2;
+}
+
+
+/* Contact Icons */
+
+.contact-link i {
+
+    transition:
+        transform 0.3s ease;
+}
+
+.contact-link:hover i {
+
+    transform:
+        scale(1.15);
 }
 
 
@@ -347,9 +580,11 @@ section:first-of-type a[href*="resume"]:hover {
 
 .reveal {
 
-    opacity: 0;
+    opacity:
+        0;
 
-    transform: translateY(35px);
+    transform:
+        translateY(35px);
 
     transition:
         opacity 0.8s ease,
@@ -358,9 +593,11 @@ section:first-of-type a[href*="resume"]:hover {
 
 .reveal.show {
 
-    opacity: 1;
+    opacity:
+        1;
 
-    transform: translateY(0);
+    transform:
+        translateY(0);
 }
 
 
@@ -369,36 +606,44 @@ section:first-of-type a[href*="resume"]:hover {
 ========================================================= */
 
 .project-card:nth-child(1) {
-    transition-delay: 0.05s;
+    transition-delay:
+        0.05s;
 }
 
 .project-card:nth-child(2) {
-    transition-delay: 0.15s;
+    transition-delay:
+        0.15s;
 }
 
 .project-card:nth-child(3) {
-    transition-delay: 0.25s;
+    transition-delay:
+        0.25s;
 }
 
 .project-card:nth-child(4) {
-    transition-delay: 0.35s;
+    transition-delay:
+        0.35s;
 }
 
 
 .info-card:nth-child(1) {
-    transition-delay: 0.05s;
+    transition-delay:
+        0.05s;
 }
 
 .info-card:nth-child(2) {
-    transition-delay: 0.15s;
+    transition-delay:
+        0.15s;
 }
 
 .info-card:nth-child(3) {
-    transition-delay: 0.25s;
+    transition-delay:
+        0.25s;
 }
 
 .info-card:nth-child(4) {
-    transition-delay: 0.35s;
+    transition-delay:
+        0.35s;
 }
 
 
@@ -407,86 +652,51 @@ section:first-of-type a[href*="resume"]:hover {
 ========================================================= */
 
 section {
-    position: relative;
+    position:
+        relative;
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .project-card,
-    .experience-card,
-    .skill-category,
-    .info-card {
-        padding: 22px;
-    }
-
-    section:first-of-type h1 {
-        font-size: 3rem;
-    }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-
-        animation-duration: 0.01ms !important;
-
-        animation-iteration-count: 1 !important;
-
-        transition-duration: 0.01ms !important;
-
-        scroll-behavior: auto !important;
-    }
-
-}
 
 /* =========================================================
    FLOATING ANIMATED BACKGROUND
 ========================================================= */
 
-body {
-    position: relative;
-    overflow-x: hidden;
-}
-
-
-/* Background container */
-
 .floating-background {
-    position: fixed;
 
-    inset: 0;
+    position:
+        fixed;
 
-    width: 100%;
-    height: 100%;
+    inset:
+        0;
 
-    overflow: hidden;
+    width:
+        100%;
 
-    pointer-events: none;
+    height:
+        100%;
 
-    z-index: 0;
+    overflow:
+        hidden;
+
+    pointer-events:
+        none;
+
+    z-index:
+        0;
 }
 
 
-/* Make actual website content stay above animation */
+/* Keep website above animation */
 
 nav,
 section,
 footer {
-    position: relative;
-    z-index: 2;
+
+    position:
+        relative;
+
+    z-index:
+        2;
 }
 
 
@@ -496,26 +706,32 @@ footer {
 
 .floating-box {
 
-    position: absolute;
+    position:
+        absolute;
 
-    display: block;
+    display:
+        block;
 
-    border: 1px solid rgba(34, 211, 238, 0.22);
+    border:
+        1px solid rgba(34, 211, 238, 0.22);
 
-    background: rgba(34, 211, 238, 0.025);
+    background:
+        rgba(34, 211, 238, 0.025);
 
     box-shadow:
         0 0 25px rgba(34, 211, 238, 0.05);
 
-    backdrop-filter: blur(2px);
+    backdrop-filter:
+        blur(2px);
 
-    -webkit-backdrop-filter: blur(2px);
+    -webkit-backdrop-filter:
+        blur(2px);
 
-    transform: rotate(45deg);
+    transform:
+        rotate(45deg);
 
     animation:
         floatBox 18s ease-in-out infinite;
-
 }
 
 
@@ -525,151 +741,236 @@ footer {
 
 .box-1 {
 
-    width: 90px;
-    height: 90px;
+    width:
+        90px;
 
-    left: 5%;
-    top: 20%;
+    height:
+        90px;
 
-    animation-duration: 18s;
+    left:
+        5%;
+
+    top:
+        20%;
+
+    animation-duration:
+        18s;
 }
 
 
 .box-2 {
 
-    width: 45px;
-    height: 45px;
+    width:
+        45px;
 
-    left: 18%;
-    top: 70%;
+    height:
+        45px;
 
-    animation-duration: 13s;
+    left:
+        18%;
 
-    animation-delay: -4s;
+    top:
+        70%;
 
-    border-color: rgba(168, 85, 247, 0.25);
+    animation-duration:
+        13s;
+
+    animation-delay:
+        -4s;
+
+    border-color:
+        rgba(168, 85, 247, 0.25);
 }
 
 
 .box-3 {
 
-    width: 130px;
-    height: 130px;
+    width:
+        130px;
 
-    right: 8%;
-    top: 18%;
+    height:
+        130px;
 
-    animation-duration: 22s;
+    right:
+        8%;
 
-    animation-delay: -8s;
+    top:
+        18%;
 
-    border-color: rgba(124, 58, 237, 0.2);
+    animation-duration:
+        22s;
+
+    animation-delay:
+        -8s;
+
+    border-color:
+        rgba(124, 58, 237, 0.2);
 }
 
 
 .box-4 {
 
-    width: 60px;
-    height: 60px;
+    width:
+        60px;
 
-    right: 22%;
-    top: 55%;
+    height:
+        60px;
 
-    animation-duration: 16s;
+    right:
+        22%;
 
-    animation-delay: -2s;
+    top:
+        55%;
+
+    animation-duration:
+        16s;
+
+    animation-delay:
+        -2s;
 }
 
 
 .box-5 {
 
-    width: 35px;
-    height: 35px;
+    width:
+        35px;
 
-    left: 42%;
-    top: 15%;
+    height:
+        35px;
 
-    animation-duration: 12s;
+    left:
+        42%;
 
-    animation-delay: -6s;
+    top:
+        15%;
 
-    border-color: rgba(168, 85, 247, 0.3);
+    animation-duration:
+        12s;
+
+    animation-delay:
+        -6s;
+
+    border-color:
+        rgba(168, 85, 247, 0.3);
 }
 
 
 .box-6 {
 
-    width: 110px;
-    height: 110px;
+    width:
+        110px;
 
-    left: 70%;
-    top: 72%;
+    height:
+        110px;
 
-    animation-duration: 24s;
+    left:
+        70%;
 
-    animation-delay: -10s;
+    top:
+        72%;
+
+    animation-duration:
+        24s;
+
+    animation-delay:
+        -10s;
 }
 
 
 .box-7 {
 
-    width: 50px;
-    height: 50px;
+    width:
+        50px;
 
-    left: 85%;
-    top: 45%;
+    height:
+        50px;
 
-    animation-duration: 15s;
+    left:
+        85%;
 
-    animation-delay: -5s;
+    top:
+        45%;
 
-    border-color: rgba(34, 211, 238, 0.3);
+    animation-duration:
+        15s;
+
+    animation-delay:
+        -5s;
+
+    border-color:
+        rgba(34, 211, 238, 0.3);
 }
 
 
 .box-8 {
 
-    width: 75px;
-    height: 75px;
+    width:
+        75px;
 
-    left: 30%;
-    top: 40%;
+    height:
+        75px;
 
-    animation-duration: 20s;
+    left:
+        30%;
 
-    animation-delay: -12s;
+    top:
+        40%;
 
-    border-color: rgba(124, 58, 237, 0.22);
+    animation-duration:
+        20s;
+
+    animation-delay:
+        -12s;
+
+    border-color:
+        rgba(124, 58, 237, 0.22);
 }
 
 
 .box-9 {
 
-    width: 25px;
-    height: 25px;
+    width:
+        25px;
 
-    left: 55%;
-    top: 80%;
+    height:
+        25px;
 
-    animation-duration: 11s;
+    left:
+        55%;
 
-    animation-delay: -3s;
+    top:
+        80%;
+
+    animation-duration:
+        11s;
+
+    animation-delay:
+        -3s;
 }
 
 
 .box-10 {
 
-    width: 150px;
-    height: 150px;
+    width:
+        150px;
 
-    left: -40px;
-    top: 55%;
+    height:
+        150px;
 
-    animation-duration: 26s;
+    left:
+        -40px;
 
-    animation-delay: -15s;
+    top:
+        55%;
 
-    border-color: rgba(34, 211, 238, 0.15);
+    animation-duration:
+        26s;
+
+    animation-delay:
+        -15s;
+
+    border-color:
+        rgba(34, 211, 238, 0.15);
 }
 
 
@@ -685,8 +986,8 @@ footer {
             translate3d(0, 0, 0)
             rotate(45deg);
 
-        opacity: 0.25;
-
+        opacity:
+            0.25;
     }
 
 
@@ -696,8 +997,8 @@ footer {
             translate3d(35px, -45px, 0)
             rotate(80deg);
 
-        opacity: 0.45;
-
+        opacity:
+            0.45;
     }
 
 
@@ -707,8 +1008,8 @@ footer {
             translate3d(-20px, -90px, 0)
             rotate(125deg);
 
-        opacity: 0.25;
-
+        opacity:
+            0.25;
     }
 
 
@@ -718,8 +1019,8 @@ footer {
             translate3d(45px, -45px, 0)
             rotate(170deg);
 
-        opacity: 0.4;
-
+        opacity:
+            0.4;
     }
 
 
@@ -729,8 +1030,76 @@ footer {
             translate3d(0, 0, 0)
             rotate(225deg);
 
-        opacity: 0.25;
+        opacity:
+            0.25;
+    }
+}
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .project-card,
+    .experience-card,
+    .skill-category,
+    .info-card {
+
+        padding:
+            22px;
+    }
+
+
+    section:first-of-type h1 {
+
+        font-size:
+            3rem;
+    }
+
+
+    .project-buttons {
+
+        gap:
+            10px;
+    }
+
+
+    .project-demo-btn,
+    .project-github-btn {
+
+        padding:
+            10px 16px;
+
+        font-size:
+            0.9rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
     }
 
 }
