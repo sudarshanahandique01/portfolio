@@ -105,51 +105,46 @@
              MOBILE NAVIGATION PICKLIST
         ================================================== -->
 
-        <div class="md:hidden">
+       <!-- MOBILE THREE-DOT MENU -->
 
-            <select id="mobile-nav-select"
-                    aria-label="Navigate to section"
-                    class="bg-gray-900 text-white border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
+<div class="md:hidden relative">
 
-                <option value="">
-                    Navigate to...
-                </option>
+    <!-- Three dots button -->
+    <button
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        class="mobile-menu-button"
+    >
+        ⋮
+    </button>
 
-                <option value="#home">
-                    Home
-                </option>
 
-                <option value="#about">
-                    About
-                </option>
+    <!-- Dropdown menu -->
+    <div
+        id="mobile-menu"
+        class="mobile-menu"
+    >
 
-                <option value="#impact">
-                    Professional Impact
-                </option>
+        <a href="#home">Home</a>
 
-                <option value="#skills">
-                    Skills
-                </option>
+        <a href="#about">About</a>
 
-                <option value="#certifications">
-                    Certifications
-                </option>
+        <a href="#impact">Professional Impact</a>
 
-                <option value="#projects">
-                    Projects
-                </option>
+        <a href="#skills">Skills</a>
 
-                <option value="#experience">
-                    Experience
-                </option>
+        <a href="#certifications">Certifications</a>
 
-                <option value="#contact">
-                    Contact
-                </option>
+        <a href="#projects">Projects</a>
 
-            </select>
+        <a href="#experience">Experience</a>
 
-        </div>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</div>
 
     </div>
 
@@ -1785,41 +1780,52 @@
 // MOBILE NAVIGATION PICKLIST
 // =====================================================
 
-const mobileNav = document.getElementById("mobile-nav-select");
+// =====================================================
+// MOBILE THREE-DOT MENU
+// =====================================================
 
-if (mobileNav) {
+const mobileMenuButton =
+    document.getElementById("mobile-menu-button");
 
-    mobileNav.addEventListener("change", function () {
+const mobileMenu =
+    document.getElementById("mobile-menu");
 
-        const selectedSection = this.value;
 
-        if (!selectedSection) {
-            return;
+if (mobileMenuButton && mobileMenu) {
+
+    // Open / close menu
+    mobileMenuButton.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        mobileMenu.classList.toggle("active");
+
+    });
+
+
+    // Close menu when a link is clicked
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", function () {
+
+            mobileMenu.classList.remove("active");
+
+        });
+
+    });
+
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+
+        if (
+            !mobileMenu.contains(e.target) &&
+            !mobileMenuButton.contains(e.target)
+        ) {
+
+            mobileMenu.classList.remove("active");
+
         }
-
-        const target = document.querySelector(selectedSection);
-
-        if (target) {
-
-            const navbarHeight = 80;
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                navbarHeight;
-
-            window.scrollTo({
-
-                top: targetPosition,
-
-                behavior: "smooth"
-
-            });
-
-        }
-
-        // Reset dropdown after navigation
-        this.value = "";
 
     });
 
