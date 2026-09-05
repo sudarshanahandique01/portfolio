@@ -1372,18 +1372,31 @@ footer {
     display: flex;
     gap: 20px;
     padding: 28px;
-
     background: rgba(17, 24, 39, 0.65);
-
     border: 1px solid #1f2937;
     border-radius: 16px;
-
     position: relative;
     overflow: hidden;
-
     transition: all 0.35s ease;
+    height: 100%;
 }
 
+.certification-card .flex-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.certification-card .flex-1 .text-sm.text-gray-500.mb-4 {
+    margin-top: auto;
+    margin-bottom: 12px;
+}
+
+.certification-card .certificate-btn {
+    margin-top: 0;
+    align-self: flex-start;
+}
 
 /* LEFT ACCENT LINE */
 
@@ -1523,6 +1536,7 @@ footer {
 }
 
 
+
 /* =========================================================
    MOBILE RESPONSIVENESS
 ========================================================= */
@@ -1530,11 +1544,42 @@ footer {
 @media (max-width: 640px) {
 
     .certification-card {
-        padding: 22px;
-
-        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
+    .certification-card .flex-1 {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .certification-card .flex-1 .text-sm.text-gray-500.mb-4 {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .certification-card .certificate-btn {
+        margin-top: 0;
+    }
+
+    .certification-icon {
+        min-width: 45px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .certification-card h3 {
+        font-size: 18px;
+    }
+
+    .certificate-btn {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+}
     .certification-icon {
         min-width: 45px;
         width: 45px;
