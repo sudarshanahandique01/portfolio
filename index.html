@@ -30,10 +30,11 @@
 
 <body class="bg-gray-950 text-white">
 
-    <!-- =====================================================
+
+
+ <!-- =====================================================
          FLOATING BACKGROUND
     ====================================================== -->
-
     <div class="floating-background">
 
         <span class="floating-box box-1"></span>
@@ -67,42 +68,63 @@
 
             <!-- Navigation Links -->
 
-            <div class="hidden md:flex space-x-8">
-<a href="#about" class="nav-link">
-    About
-</a>
+           <div class="hidden md:flex space-x-8">
 
-<a href="#skills" class="nav-link">
-    Skills
-</a>
+    <a href="#home" class="nav-link">Home</a>
 
-<a href="#certifications" class="nav-link">
-    Certifications
-</a>
+    <a href="#about" class="nav-link">About</a>
 
-<a href="#projects" class="nav-link">
-    Projects
-</a>
+    <a href="#skills" class="nav-link">Skills</a>
 
-<a href="#experience" class="nav-link">
-    Experience
-</a>
+    <a href="#certifications" class="nav-link">Certifications</a>
 
-<a href="#contact" class="nav-link">
-    Contact
-</a>
-            </div>
+    <a href="#projects" class="nav-link">Projects</a>
+
+    <a href="#experience" class="nav-link">Experience</a>
+
+    <a href="#contact" class="nav-link">Contact</a>
+
+</div>
+   
 
         </div>
 
     </nav>
+
+    <!-- MOBILE NAVIGATION -->
+
+<div class="mobile-nav">
+
+    <select id="mobile-nav-select">
+
+        <option value="">Navigate to...</option>
+
+        <option value="#home">Home</option>
+
+        <option value="#about">About</option>
+
+        <option value="#impact">Professional Impact</option>
+
+        <option value="#skills">Skills</option>
+
+        <option value="#certifications">Certifications</option>
+
+        <option value="#projects">Projects</option>
+
+        <option value="#experience">Experience</option>
+
+        <option value="#contact">Contact</option>
+
+    </select>
+
+</div>
 
 
     <!-- =====================================================
          HERO SECTION
     ====================================================== -->
 
-    <section class="min-h-screen flex items-center pt-20">
+    <section id="home" class="min-h-screen flex items-center pt-20">
 
         <div class="max-w-6xl mx-auto px-6 w-full">
 
@@ -133,7 +155,7 @@
 
                 <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-2xl">
 
-                    I’m a Technical Support Analyst with a strong interest in Artificial Intelligence, Machine Learning, and Data Analytics. I work with Python, SQL, Power BI, and data technologies to analyze data, solve problems, and build meaningful solutions. I’m passionate about applying AI and ML to real-world challenges and continuously expanding my skills toward a career in Data & AI
+                    Turning data into insights and ideas into intelligent solutions.
 
                 </p>
 
@@ -1814,6 +1836,33 @@ counters.forEach((counter) => {
 
     </script>
 
+<script>
+    window.addEventListener("load", function () {
+
+        const welcomeScreen =
+            document.getElementById("welcome-screen");
+
+        if (!welcomeScreen) {
+            return;
+        }
+
+        /* Wait before starting animation */
+        setTimeout(function () {
+
+            welcomeScreen.classList.add("slide-up");
+
+        }, 2200);
+
+
+        /* Remove after animation finishes */
+        setTimeout(function () {
+
+            welcomeScreen.remove();
+
+        }, 3500);
+
+    });
+</script>
 
 </body>
 

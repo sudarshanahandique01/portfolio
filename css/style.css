@@ -1554,3 +1554,62 @@ footer {
     }
 
 }
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-nav {
+    display: none;
+}
+
+
+#mobile-nav-select {
+    appearance: none;
+
+    width: 100%;
+
+    padding: 10px 40px 10px 14px;
+
+    border: 1px solid #374151;
+
+    border-radius: 8px;
+
+    background:
+        #111827;
+
+    color: #d1d5db;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+#mobile-nav-select:focus {
+    border-color: #06b6d4;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Hide desktop navigation */
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+
+    /* Show mobile navigation */
+
+    .mobile-nav {
+        display: block;
+
+        width: 150px;
+    }
+
+}
+
